@@ -1,0 +1,34 @@
+#MQTT config
+identity:
+  orgId: Vidieukhien
+  typeId: RaspberryPi
+  deviceId: Pi3
+auth:
+  #  user: myKey
+  #  password: myToken
+  token: myToken
+options:
+  host: broker.hivemq.com
+  #  host: 113.190.254.5
+  # host: test.mosquitto.org
+  # host: mqtt.eclipse.org
+  logLevel: info
+  mqtt:
+    port: 1883
+    transport: tcp
+    cleanStart: false
+    sessionExpiry: 3600
+    keepAlive: 60
+    caFile: myPath
+#Api config
+api:
+  hosts: [ http://113.190.254.5:5003 ]
+  host: http://113.190.254.5:5003
+
+fixed:
+  deviceId: TNT-DEVICE-01
+
+frontEnd:
+  #  sourceDir: /home/son/IdeaProjects/ProxyProjects/frontend
+  sourceDir: C:\Users\sonbu\IdeaProjects\ProxyProjects\frontend
+  port: 4444

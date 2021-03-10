@@ -1,0 +1,17 @@
+0      2021-03-10 15:02:28,576 DEBUG [JavaFX-Launcher] desktop.Main (Main.java:92).init() - C:\Users\SONBUI~1\AppData\Local\Temp\ZSupport_Lock.dat
+2      2021-03-10 15:02:28,578 DEBUG [JavaFX-Launcher] desktop.Main (Main.java:105).init() - Overlapping File Lock Error: null
+66     2021-03-10 15:02:28,642 DEBUG [pool-2-thread-1] desktop.Main (AppPreferencesHelper.java:82).lambda$getYamlConfig$0() - CurrentDir:E:\JavaFx\SupportTesting\app\build\classes\java
+67     2021-03-10 15:02:28,643 DEBUG [pool-2-thread-1] desktop.Main (AppPreferencesHelper.java:89).lambda$getYamlConfig$0() - Use Internal config
+85     2021-03-10 15:02:28,661 INFO  [RxCachedThreadScheduler-1] desktop.Main (Main.java:124).lambda$init$1() - Config:[{orgId=Vidieukhien, typeId=RaspberryPi, deviceId=Pi3}, {token=myToken}, {host=broker.hivemq.com, logLevel=info, mqtt={port=1883, transport=tcp, cleanStart=false, sessionExpiry=3600, keepAlive=60, caFile=myPath}}, {hosts=[http://113.190.254.5:5003], host=http://113.190.254.5:5003}, {deviceId=TNT-DEVICE-01}, {sourceDir=C:\Users\sonbu\IdeaProjects\ProxyProjects\frontend, port=4444}]
+129    2021-03-10 15:02:28,705 DEBUG [RxCachedThreadScheduler-2] desktop.Main (MainBusiness.java:90).lambda$run$4() - Config Activity With Device Uid:TNT-DEVICE-01
+131    2021-03-10 15:02:28,707 INFO  [RxCachedThreadScheduler-1] desktop.Main (MainBusiness.java:65).lambda$run$0() - Activity Trigger Run:true
+451    2021-03-10 15:02:29,027 DEBUG [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:216).getRegeditCommandResult() -  -->: reg query "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "ZigApp"
+475    2021-03-10 15:02:29,051 DEBUG [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:239).getRegeditCommandResult() - <--ExitCode: 0
+475    2021-03-10 15:02:29,051 INFO  [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:90).initStage() -  Parser path for line :     ZigApp    REG_SZ    C:\Users\Son Bui\AppData\Local\app\app.exe
+475    2021-03-10 15:02:29,051 INFO  [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:93).initStage() - Start finding:    ZigApp    REG_SZ    C:\Users\Son Bui\AppData\Local\app\app.exe
+476    2021-03-10 15:02:29,052 INFO  [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:97).initStage() -  Got Path startup: C:\Users\Son Bui\AppData\Local\app\app.exe
+2564208 2021-03-10 15:45:12,784 DEBUG [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:216).getRegeditCommandResult() -  -->: reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "ZigApp" /f
+2564235 2021-03-10 15:45:12,811 DEBUG [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:239).getRegeditCommandResult() - <--ExitCode: 0
+2564235 2021-03-10 15:45:12,811 INFO  [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:133).lambda$initStage$1() -  getCurrentDir():E:\JavaFx\SupportTesting\app\build\classes\java
+2564235 2021-03-10 15:45:12,811 INFO  [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:134).lambda$initStage$1() -  getParentDir():E:\JavaFx\SupportTesting\app\build\classes
+2564236 2021-03-10 15:45:12,812 INFO  [JavaFX Application Thread] desktop.Main (SystemConfigFragment.java:136).lambda$initStage$1() -  getExecutionPath():E:\JavaFx\SupportTesting\app

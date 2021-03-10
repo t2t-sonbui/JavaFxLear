@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<!--<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../../css/listview-no-scroll-bar.css">-->
+
+<HBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <StackPane stylesheets="@/css/jfoenix-components.css" HBox.hgrow="ALWAYS">
+            <children>
+                <VBox>
+                    <children>
+                        <Pane prefHeight="112.0" style="-fx-background-color: green;">
+                     <children>
+                        <AnchorPane />
+                     </children></Pane>
+                        <AnchorPane fx:id="rootLayout" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Pane prefWidth="0.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <JFXListView fx:id="listView" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+                <JFXNodesList fx:id="nodesList" rotate="180.0" spacing="15" StackPane.alignment="TOP_RIGHT">
+                    <children>
+                        <JFXButton fx:id="saveButton" contentDisplay="GRAPHIC_ONLY" styleClass="main-button">
+                            <graphic>
+                                <FontIcon iconLiteral="fas-save" iconSize="24" styleClass="main-icon" />
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                    <StackPane.margin>
+                        <Insets right="28.0" top="80.0" />
+                    </StackPane.margin>
+                </JFXNodesList>
+            </children>
+        </StackPane>
+    </children>
+</HBox>

@@ -1,0 +1,35 @@
+<component name="ArtifactManager">
+  <artifact name="app.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/app_main_jar</output-path>
+    <root id="root">
+      <element id="archive" name="app.main.jar">
+        <element id="module-output" name="app.main" />
+        <element id="module-output" name="app.data.main" />
+        <element id="module-output" name="app.domain.main" />
+        <element id="module-output" name="app.device.main" />
+      </element>
+      <element id="library" level="project" name="Gradle: org.reactivestreams:reactive-streams:1.0.3" />
+      <element id="library" level="project" name="Gradle: io.reactivex.rxjava2:rxjava:2.2.19" />
+      <element id="library" level="project" name="Gradle: org.openjfx:javafx-graphics:win:14" />
+      <element id="library" level="project" name="Gradle: com.google.dagger:dagger:2.29.1" />
+      <element id="library" level="project" name="Gradle: org.openjfx:javafx-controls:win:14" />
+      <element id="library" level="project" name="Gradle: org.openjfx:javafx-fxml:14" />
+      <element id="library" level="project" name="Gradle: com.jfoenix:jfoenix:9.0.10" />
+      <element id="library" level="project" name="Gradle: org.kordamp.ikonli:ikonli-fontawesome5-pack:2.4.0" />
+      <element id="library" level="project" name="Gradle: org.openjfx:javafx-base:win:14" />
+      <element id="library" level="project" name="Gradle: org.bouncycastle:bcprov-jdk15to18:1.65" />
+      <element id="library" level="project" name="Gradle: org.kordamp.ikonli:ikonli-core:2.4.0" />
+      <element id="library" level="project" name="Gradle: org.openjfx:javafx-controls:14" />
+      <element id="library" level="project" name="Gradle: org.openjfx:javafx-base:14" />
+      <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.13" />
+      <element id="library" level="project" name="Gradle: log4j:log4j:1.2.17" />
+      <element id="library" level="project" name="Gradle: org.openjfx:javafx-fxml:win:14" />
+      <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.5" />
+      <element id="library" level="project" name="Gradle: org.kordamp.ikonli:ikonli-javafx:2.4.0" />
+      <element id="library" level="project" name="Gradle: org.bouncycastle:bcpkix-jdk15to18:1.65" />
+      <element id="library" level="project" name="Gradle: javax.inject:javax.inject:1" />
+      <element id="library" level="project" name="Gradle: org.openjfx:javafx-graphics:14" />
+      <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.25" />
+    </root>
+  </artifact>
+</component>
