@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+        <VBox alignment="TOP_RIGHT" spacing="16.0" HBox.hgrow="ALWAYS">
+            <children>
+                <HBox alignment="CENTER_RIGHT" spacing="16.0">
+                    <children>
+                  <Label fx:id="lblUpdateStatus" />
+                        <JFXButton fx:id="btnCheckOta" buttonType="FLAT" prefHeight="36.0" style="-fx-text-fill:#5264AE;-fx-font-size:14px;" text="CHECK UPDATE" />
+                        <JFXButton fx:id="btnUpdate" buttonType="RAISED" disable="true" prefHeight="36.0" style="-fx-text-fill:WHITE;-fx-background-color:#00AA00;-fx-font-size:14px;" text="UPDATE" />
+                    </children>
+               <VBox.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </VBox.margin>
+                </HBox>
+                <JFXToggleButton fx:id="cbStartup" contentDisplay="RIGHT" text="Start with system" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="16.0" right="16.0" />
+               </VBox.margin>
+            </JFXToggleButton>
+            </children>
+        </VBox>
+   </children>
+</HBox>

@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import dagger.Module;
 import dagger.Provides;
 import io.reactivex.Scheduler;
+import org.apache.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 import vn.mht.app.data.DataRepositoryImpl;
 import vn.mht.app.data.local.PreferencesHelper;
@@ -16,12 +17,23 @@ import javax.inject.Singleton;
 import java.util.Map;
 import java.util.Properties;
 
+import vn.mht.app.device.AppHardwareHelper;
+import vn.mht.app.device.DeviceRepositoryImpl;
+import vn.mht.app.device.HardwareHelper;
 import vn.mht.app.domain.model.ProductBuildModel;
 import vn.mht.app.domain.repository.DataRepository;
+import vn.mht.app.domain.repository.DeviceRepository;
 
 
 @Module
 public abstract class AppModule {
+
+    @Provides
+    @Singleton
+    static RxBus provideRxBus(@ThreadBackground final Scheduler backgroundThread) {
+        return new RxBus(backgroundThread);
+    }
+
 
     @Singleton
     @Provides
@@ -59,18 +71,18 @@ public abstract class AppModule {
     static DataRepository provideDataRepository(final PreferencesHelper preferencesHelper, final Gson gson, final ProductBuildModel productBuildModel, final org.apache.log4j.Logger logger) {
         return new DataRepositoryImpl(preferencesHelper, gson, productBuildModel, logger);
     }
-//
-//    @Provides
-//    @Singleton
-//    static HardwareHelper provideHardwareHelper(final GpioController gpioController, final Map<String, GpioPinDigitalOutput> outputPins, final Map<String, GpioPinDigitalInput> inputPins, @UseSimulatorIO boolean simulator) {
-//        return new AppHardwareHelper(gpioController, outputPins, inputPins, simulator);
-//    }
-//
-//    @Provides
-//    @Singleton
-//    static DeviceRepository provideDeviceRepository(final HardwareHelper hardwareHelper) {
-//        return new DeviceRepositoryImpl(hardwareHelper);
-//    }
+
+    @Provides
+    @Singleton
+    static HardwareHelper provideHardwareHelper(final Logger logger) {
+        return new AppHardwareHelper(logger);
+    }
+
+    @Provides
+    @Singleton
+    static DeviceRepository provideDeviceRepository(final HardwareHelper hardwareHelper) {
+        return new DeviceRepositoryImpl(hardwareHelper);
+    }
 //
 //    @Provides
 //    @Singleton
@@ -78,10 +90,5 @@ public abstract class AppModule {
 //        return new BusinessRepositoryImpl(mediaPlayerHelper, scheduleJobHelper, mqttConnectionHelper);
 //    }
 
-    @Provides
-    @Singleton
-    static RxBus provideRxBus(@ThreadBackground final Scheduler backgroundThread) {
-        return new RxBus(backgroundThread);
-    }
 
 }

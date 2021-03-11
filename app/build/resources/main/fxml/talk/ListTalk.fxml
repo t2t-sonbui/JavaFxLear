@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXToggleNode?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<!--<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../../css/listview-no-scroll-bar.css">-->
+
+<HBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <StackPane stylesheets="@/css/jfoenix-components.css" HBox.hgrow="ALWAYS">
+            <children>
+                <VBox>
+                    <children>
+                        <VBox prefHeight="112.0">
+                            <children>
+                                <AnchorPane VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <HBox alignment="CENTER_LEFT" prefWidth="96.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+<!--                                                <StackPane styleClass="custom-jfx-list-view-icon-container">-->
+<!--                                                    <children>-->
+<!--                                                        <Circle opacity="0.2" radius="28.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />-->
+<!--                                                        <FontIcon fx:id="icoSound" iconColor="RED" iconLiteral="fas-microphone" iconSize="24" styleClass="custom-jfx-list-view-icon" />-->
+<!--                                                    </children>-->
+<!--                                                </StackPane>-->
+
+                                                <JFXButton fx:id="talkButton" contentDisplay="GRAPHIC_ONLY" styleClass="main-button">
+                                                    <graphic>
+                                                        <FontIcon iconLiteral="fas-microphone" iconSize="24" styleClass="main-icon" />
+                                                    </graphic>
+                                                </JFXButton>
+                                            </children>
+                                 <padding>
+                                    <Insets left="24.0" right="24.0" />
+                                 </padding>
+                                        </HBox>
+                                        <VBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Text fx:id="txtTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Two -line item">
+                                                    <font>
+                                                        <Font size="16.0" />
+                                                    </font>
+                                                </Text>
+                                                <Text fx:id="txtDesc" fill="#393939" strokeType="OUTSIDE" strokeWidth="0.0" text="Secondary text" />
+                                            </children>
+                                        </VBox>
+                                        <HBox alignment="CENTER_RIGHT" spacing="12.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+
+                                                <JFXToggleNode pickOnBounds="false" styleClass="toggle-icon-enable">
+                                                    <FontIcon iconLiteral="fas-volume-up" iconSize="18" styleClass="icon" />
+                                                </JFXToggleNode>
+
+                                                <JFXButton fx:id="saveButton" contentDisplay="GRAPHIC_ONLY" styleClass="float-mini-button">
+                                                    <graphic>
+                                                        <FontIcon iconLiteral="fas-save" iconSize="18" styleClass="main-icon" />
+                                                    </graphic>
+                                                </JFXButton>
+
+                                                <JFXButton fx:id="refreshButton" contentDisplay="GRAPHIC_ONLY" styleClass="float-mini-button">
+                                                    <graphic>
+                                                        <FontIcon iconLiteral="fas-sync" iconSize="18" styleClass="main-icon" />
+                                                    </graphic>
+                                                </JFXButton>
+
+                                            </children>
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                 <padding>
+                                    <Insets left="24.0" right="24.0" />
+                                 </padding>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </VBox>
+                        <AnchorPane fx:id="rootLayout" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Pane prefWidth="0.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <JFXListView fx:id="listView" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </VBox>
+<!--                <JFXNodesList fx:id="nodesList" rotate="180.0" spacing="15" StackPane.alignment="TOP_RIGHT">-->
+<!--                    <children>-->
+<!--                        <JFXButton fx:id="saveButton" contentDisplay="GRAPHIC_ONLY" styleClass="float-button">-->
+<!--                            <graphic>-->
+<!--                                <FontIcon iconLiteral="fas-save" iconSize="24" styleClass="main-icon" />-->
+<!--                            </graphic>-->
+<!--                        </JFXButton>-->
+<!--                    </children>-->
+<!--                    <StackPane.margin>-->
+<!--                        <Insets right="28.0" top="80.0" />-->
+<!--                    </StackPane.margin>-->
+<!--                </JFXNodesList>-->
+            </children>
+        </StackPane>
+    </children>
+</HBox>

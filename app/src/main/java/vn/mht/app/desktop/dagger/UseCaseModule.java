@@ -4,7 +4,9 @@ import dagger.Module;
 import dagger.Provides;
 import vn.mht.app.domain.interactors.use.data.impl.GetDeviceUidInteractorImpl;
 import vn.mht.app.domain.interactors.use.data.impl.PrepareLoadConfigInteractorImpl;
+import vn.mht.app.domain.interactors.use.device.impl.GetSerialPortAvaliableInteractorImpl;
 import vn.mht.app.domain.repository.DataRepository;
+import vn.mht.app.domain.repository.DeviceRepository;
 
 import javax.inject.Singleton;
 
@@ -46,6 +48,12 @@ public final class UseCaseModule {
     @Singleton
     static GetDeviceUidInteractorImpl provideGetDeviceUidInteractorImpl(final DataRepository repository) {
         return new GetDeviceUidInteractorImpl(repository);
+    }
+
+    @Provides
+    @Singleton
+    static GetSerialPortAvaliableInteractorImpl provideGetSerialPortAvaliableInteractorImpl(final DeviceRepository repository) {
+        return new GetSerialPortAvaliableInteractorImpl(repository);
     }
 }
 
